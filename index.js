@@ -8,6 +8,9 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
+app.use(funtion(req,res,next){
+    next();
+})
 app.use(bodyParser.json());
 const MONGO_URL = `mongodb+srv://kalinga:kalinga@kalinga.cfsfv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
